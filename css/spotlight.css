@@ -1,0 +1,190 @@
+﻿#SpotlightWrapper {
+	padding:0;
+	margin: 0;
+	border: 0;
+	position: static;
+	font-family: Arial, Helvetica, Sans-Serif;
+	z-index: 10;
+    text-align: left;
+}
+
+#SpotlightWrapper li {
+	font-size: .8em;
+	margin: 0px;
+	padding: 0px;
+}
+
+#SpotlightWrapper h3  {
+	text-decoration: none;
+	margin-bottom: 0.5em;
+	color: #fff;
+	position: relative;
+	padding-top: 10px;
+	width: 348px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+#SpotlightWrapper h5  {
+	text-decoration: none;
+	margin-bottom: 0.5em;
+	color: #fff;
+	position: relative;
+	padding-top: 162px;
+	width: 500px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	font-size: 16px;
+}
+
+#SpotlightWrapper a:link, #SpotlightWrapper a:visited, #SpotlightWrapper a:hover, #SpotlightWrapper a:active{
+	color: #fff;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+#SpotlightWrapper h3, #SpotlightWrapper p, #SpotlightWrapper h5 {
+	padding-left: 25px;
+}
+a.SpotlightActionLink:hover {
+	text-decoration: underline;
+
+}
+
+#SpotlightWrapper .text {
+	width: 348px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #6FB1EF;
+}
+
+ul#SpotlightList {
+	margin: 0px;
+	list-style:none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	color: #FFFFFF;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+ul#SpotlightList li {
+	padding: 0px;
+	margin: 0px;
+	list-style:none;
+	background-image: url(http://www.exceltreeexperts.com/images/Bullet_BlueArrow.gif);
+	background-repeat: no-repeat;
+	background-position: 0px .6em;
+	color: #89c9fe;
+	font-size: 1.0em;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+ul#SpotlightList a:link, ul#SpotlightList a:visited, ul#SpotlightList a:hover, ul#SpotlightList a:active, ul#SpotlightList li  {
+	color: #ffc601;
+	text-decoration: none;
+	font-size: 1.0em;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.2em;
+	text-transform: capitalize;
+}
+
+ul#SpotlightList a:hover {
+	text-decoration: underline;
+}
+
+#SpotlightWrapper li#Commercial, li#Residential, #SpotlightWrapper li#Angies, #SpotlightWrapper li#Open {
+	width: 380px;
+	height: 333px;
+	background-repeat: no-repeat;
+	margin: 0;
+	position: absolute;
+	z-index: 10;
+	padding-right: 520px;
+	background-image: url(../images/bgRotation.jpg);
+	top: 0;
+}
+
+#SpotlightWrapper li#Residential {
+	background-position: 0 0;
+}
+
+#SpotlightWrapper li#Commercial {
+	background-position: 0 -333px;
+}
+
+#SpotlightWrapper li#Angies {
+	background-position: 0 -666px;
+}
+
+#SpotlightWrapper li#Open {
+	background-position: 0 -999px;
+}
+
+#SpotlightWrapper ol {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
+}
+
+
+#SpotlightNavigation {
+    position: relative;
+    padding: 8px 15px 0px 8px;
+    margin-right: 1px;
+    margin: 0px;
+    list-style-type: none;
+    list-style-image: none;
+    margin-top: -41px;
+    margin-right: -5px;
+    *margin-top: -73px;
+    z-index: 500;
+    text-align: right;
+}
+
+#SpotlightNavigation li {
+    text-indent: 0px;
+    margin: 0px;
+    float: left;
+}
+
+
+
+
+#SpotlightNavigation  a:hover {
+    background: #265b8e;
+}
+
+#SpotlightNavigation a.activeSlide {
+    background: #265A8E;
+    color: #fff;
+}
+
+#Content {
+    top: 10px;
+    position: relative;
+}
+
+
+#SpotlightNavigation  a {
+    background: #012E5F;
+    padding: 5px 10px 5px 10px;  
+    color: #597695;
+    text-decoration: none;
+    width: 1em;    
+    border: solid 2px #416A91;
+    margin: 0 2px;    
+	opacity: 0.75;
+	filter: alpha(opacity=75); 
+	-moz-opacity: 0.75;
+	font-weight: bold;
+}
+.fontLinksWhite a {
+	text-transform: capitalize;
+	color: #FFFFFF;
+	text-decoration: underline;
+}

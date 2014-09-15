@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* backgrounds */
+
+body {
+	background-image: url(../images/bg.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+	margin: 0px;	
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+
+/* Font Styles */
+
+
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 15px;
+	margin-bottom: 10px;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 15px;
+	margin-bottom: 10px;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 15px;
+	padding-left: 20px;
+}
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+	line-height: 15px;
+}
+h5 {}
+.font_pathway {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	padding-left: 20px;
+}
+.font{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #fff;
+}
+.quote {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+.subNav {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+.footer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	}
+.fontNormBlack {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+.fontNormBlack p {
+	color: black;
+}
+.fontLinkRed {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #DA2824;
+	font-weight: bold;
+}
+.fontLinkNavNorm {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #666666;
+	font-weight: bold;
+}
+.fontLinkNavLinks {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #0579c4;
+	font-weight: bold;
+}
+.fontLinksBlue {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #0579c4;
+	font-weight: bold;
+}
+h2 a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 15px;
+	margin-bottom: 10px;
+}
+.messagetable p {
+	margin: 0px;
+	padding: 0px;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
