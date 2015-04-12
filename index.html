@@ -248,12 +248,12 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
                                       <tr>
                                         <td valign="top"><h2>Request Quote</h2>
                                           <form method="post" action="http://formidable.herokuapp.com/submissions/">
-                                            <input type="hidden" name="subject2" value="Ex-cel Tree Experts Website Lead" />
-                                            <input type="hidden" name="recipient2" value="excel" />
-                                            <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="return_link_url2" />
-                                            <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="redirect2" />
+                                            <input type="hidden" name="fields[subject2]" value="Ex-cel Tree Experts Website Lead" />
+                                            <input type="hidden" name="fields[recipient2]" value="excel" />
+                                            <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[return_link_url2]" />
+                                            <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[redirect2]" />
                                             <input type="hidden" value="Name, PrimaryPhone, email" name="required2" />
-                                            <input type="hidden" value="http://www.exceltreeexperts.com/error.htm" name="missing_fields_redirect2" />
+                                            <input type="hidden" value="http://www.exceltreeexperts.com/error.htm" name="fields[missing_fields_redirect2]" />
                                             <table width="100%" border="0" cellspacing="0" cellpadding="2">
                                               <tr>
                                                 <td valign="top" class="font">Name:</td>
@@ -261,9 +261,9 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
                                                 </tr>
                                               <tr>
                                                 <td width="43%" valign="top" class="font"><label>
-                                                  <input name="Name2" type="text" class="quote" id="Name2" />
+                                                  <input name="fields[name2]" type="text" class="quote" id="Name2" />
                                                   </label></td>
-                                                <td width="57%" valign="top" class="font"><input name="PrimaryPhone2" type="text" class="quote" id="PrimaryPhone2" /></td>
+                                                <td width="57%" valign="top" class="font"><input name="fields[PrimaryPhone2]" type="text" class="quote" id="PrimaryPhone2" /></td>
                                                 </tr>
                                               <tr>
                                                 
@@ -275,9 +275,9 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
                                               
                                               <tr>
                                                 
-                                                <td valign="top" class="font"><input name="email2" type="text" class="quote" id="email2" /></td>
+                                                <td valign="top" class="font"><input name="fields[email2]" type="text" class="quote" id="email2" /></td>
                                                 
-                                                <td valign="top" class="font"><input name="Address2" type="text" class="quote" id="Address2" size="40" /></td>
+                                                <td valign="top" class="font"><input name="fields[Address2]" type="text" class="quote" id="Address2" size="40" /></td>
                                                 
                                                 </tr>
                                               
@@ -291,11 +291,11 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
                                               
                                               <tr>
                                                 
-                                                <td valign="top" class="font"><input name="Zip2" type="text" class="quote" id="Zip2" size="15" /></td>
+                                                <td valign="top" class="font"><input name="fields[Zip2]" type="text" class="quote" id="Zip2" size="15" /></td>
                                                 
                                                 <td valign="top" class="font"><label>
                                                   
-                                                  <select name="Service Type:2" class="quote" id="Service Type:">
+                                                  <select name="fields[service_type]" class="quote" id="Service Type:">
                                                     
                                                     <option selected="selected">Select Service</option>
                                                     
@@ -319,7 +319,7 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
                                                 
                                                 <td colspan="2" valign="top" class="font"><label>
                                                   
-                                                  <textarea name="Project Information2" cols="35" rows="5" class="quote" id="Project Information2"></textarea>
+                                                  <textarea name="fields[project_information]" cols="35" rows="5" class="quote" id="Project Information2"></textarea>
                                                   
                                                   </label></td>
                                                 
@@ -335,7 +335,7 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
                                                 
                                                 <td colspan="2" valign="top" class="font"><label>
                                                   
-                                                  <input name="Submit Information2" type="submit" class="quote" id="Submit Information2" value="Submit Information" />
+                                                  <input name="fields[submit]" type="submit" class="quote" id="Submit Information2" value="Submit Information" />
                                                   
                                                   </label></td>
                                                 

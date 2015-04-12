@@ -259,38 +259,38 @@
                               <tr>
                                 <td valign="top"><h2>Request Quote</h2>
                                     <form method="post" action="http://formidable.herokuapp.com/submissions">
-                    <input type="hidden" name="subject" value="Ex-cel Tree Experts Website Lead" />
-                    <input type="hidden" name="recipient" value="excel" />
-                    <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="return_link_url" />
-                    <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="redirect" />
-                    <input type="hidden" value="http://www.exceltreeexperts.com/error.htm" name="missing_fields_redirect" />
+                    <input type="hidden" name="fields[subject]" value="Ex-cel Tree Experts Website Lead" />
+                    <input type="hidden" name="fields[recipient]" value="excel" />
+                    <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[return_link_url]" />
+                    <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[redirect]" />
+                    <input type="hidden" value="http://www.exceltreeexperts.com/error.htm" name="fields[missing_fields_redirect]" />
                                       <table width="100%" border="0" cellspacing="0" cellpadding="2">
                                         <tr>
                                           <td valign="top" class="font">Name:</td>
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font"><label>
-                                            <input name="Name:" type="text" class="quote" id="Name:" />
+                                            <input name="fields[name]" type="text" class="quote" id="Name:" />
                                           </label></td>
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font">Contact Number:</td>
                                         </tr>
                                         <tr>
-                                          <td valign="top" class="font"><input name="Contact Number:" type="text" class="quote" id="Contact Number:" /></td>
+                                          <td valign="top" class="font"><input name="fields[contact_number]" type="text" class="quote" id="Contact Number:" /></td>
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font">Contact Email:</td>
                                         </tr>
                                         <tr>
-                                          <td valign="top" class="font"><input name="Email:" type="text" class="quote" id="Email" /></td>
+                                          <td valign="top" class="font"><input name="fields[name]" type="text" class="quote" id="Email" /></td>
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font">Tree Service Type:</td>
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font"><label>
-                                            <select name="Service Type:" class="quote" id="Service Type">
+                                            <select name="fields[service_type]" class="quote" id="Service Type">
                                               <option selected="selected">Select Service</option>
                                               <option value="Commercial Tree Care">Commercial Tree Services</option>
                                               <option value="Residential Tree Care">Residential Tree Services</option>
@@ -302,7 +302,7 @@
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font"><label>
-                                            <textarea name="Project Information" cols="35" rows="5" class="quote" id="Project Information"></textarea>
+                                            <textarea name="fields[project_information]" cols="35" rows="5" class="quote" id="Project Information"></textarea>
                                           </label></td>
                                         </tr>
                                         <tr>
@@ -310,7 +310,7 @@
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font"><label>
-                                            <input name="Submit Information" type="submit" class="quote" id="Submit Information" value="Submit Information" />
+                                            <input name="fields[submit]" type="submit" class="quote" id="Submit Information" value="Submit Information" />
                                           </label></td>
                                         </tr>
                                       </table>

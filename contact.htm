@@ -161,19 +161,18 @@
                               </tr>
                               <tr>
                                 <td class="fontLinkRed"> <form method="post" action="http://formidable.herokuapp.com/submissions">
-                                          <input type="hidden" name="subject" value="Ex-cel Tree Experts Website Lead - Contact Form" />
-                                          <input type="hidden" name="recipient" value="excel" />
-                                          <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="return_link_url" />
-                                          <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="redirect" />
-                                          <input type="hidden" value="Name, PrimaryPhone, Email" name="required" />
-                                          <input type="hidden" value="http://www.exceltreeexperts.com/error.htm" name="missing_fields_redirect" />
+                                          <input type="hidden" name="fields[subject]" value="Ex-cel Tree Experts Website Lead - Contact Form" />
+                                          <input type="hidden" name="fields[recipient]" value="excel" />
+                                          <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[return_link_url]" />
+                                          <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[redirect]" />
+                                          <input type="hidden" value="http://www.exceltreeexperts.com/error.htm" name="fields[missing_fields_redirect]" />
                     <table width="100%" border="0" cellspacing="0" cellpadding="3">
                       <tr>
                         <td class="fontNormBlack">Name:</td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack"><label>
-                          <input name="Name" type="text" class="quote" id="Name" />
+                          <input name="fields[name]" type="text" class="quote" id="Name" />
                         </label></td>
                       </tr>
                       <tr>
@@ -181,14 +180,14 @@
                       </tr>
                       <tr>
                         <td class="fontNormBlack"><label>
-                          <input name="PrimaryPhone" type="text" class="quote" id="PrimaryPhone" />
+                          <input name="fields[primary_phone]" type="text" class="quote" id="PrimaryPhone" />
                         </label></td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack">Tree Service Type:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><select name="Service" class="quote" id="Service">
+                        <td class="fontNormBlack"><select name="fields[service]" class="quote" id="Service">
                             <option selected="selected">Select One</option>
                             <option value="Commercial">Commercial Services</option>
                             <option value="Residential">Residential Services</option>
@@ -198,38 +197,38 @@
                         <td class="fontNormBlack">Email Address:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><input name="Email" type="text" class="quote" id="Email" /></td>
+                        <td class="fontNormBlack"><input name="fields[email]" type="text" class="quote" id="Email" /></td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack">Street Address:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><input name="Address" type="text" class="quote" id="Address" size="50" /></td>
+                        <td class="fontNormBlack"><input name="fields[address]" type="text" class="quote" id="Address" size="50" /></td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack">City:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><input name="City" type="text" class="quote" id="City" /></td>
+                        <td class="fontNormBlack"><input name="fields[city]" type="text" class="quote" id="City" /></td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack">Zip:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><input name="Zip" type="text" class="quote" id="Zip" /></td>
+                        <td class="fontNormBlack"><input name="fields[zip]" type="text" class="quote" id="Zip" /></td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack">Feedback or Tree Project Information:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><textarea name="Information" cols="55" rows="5" class="quote" id="Information"></textarea></td>
+                        <td class="fontNormBlack"><textarea name="fields[project_information]" cols="55" rows="5" class="quote" id="Information"></textarea></td>
                       </tr>
                       <tr>
                         <td class="fontLinksBlue"><span class="font"><img src="images/spacer.gif" width="10" height="5" /></span></td>
                       </tr>
                       <tr>
                         <td class="fontLinksBlue"><label>
-                          <input name="button" type="submit" class="quote" id="button" value="Submit Information" />
+                          <input name="fields[submit]" type="submit" class="quote" id="button" value="Submit Information" />
                         </label></td>
                       </tr>
                     </table>
