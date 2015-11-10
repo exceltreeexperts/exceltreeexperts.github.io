@@ -1,14 +1,18 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
 @charset "utf-8";
 /* CSS Document */
 
 /* backgrounds */
 
 body {
-	background-image: url(../images/bg.jpg);
+  @include outer-container;
+  font-family: Arial, Helvetica, sans-serif;
+	/*background-image: url("../images/bg.jpg");*/
 	background-repeat: repeat-x;
 	background-position: center top;
-	margin: 0px;
 }
+
 a:link {
 	text-decoration: none;
 }
@@ -26,23 +30,20 @@ a:active {
 
 
 h1 {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	font-weight: bold;
-	color: #FFFFFF;
+	color: black;
 	line-height: 15px;
 	margin-bottom: 10px;
 }
 h2 {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	font-weight: bold;
-	color: #FFFFFF;
+	color: #147AC0;
 	line-height: 15px;
 	margin-bottom: 10px;
 }
 h3 {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	font-weight: bold;
 	color: #FFFFFF;
@@ -50,7 +51,6 @@ h3 {
 	padding-left: 20px;
 }
 h4 {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	font-weight: bold;
 	color: #000;
@@ -58,38 +58,30 @@ h4 {
 }
 h5 {}
 .font_pathway {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #FFFFFF;
 	padding-left: 20px;
 }
 .font{
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #FFFFFF;
 }
 p {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
-	color: #fff;
 }
 .quote {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #000000;
 }
 .subNav {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;
 	color: #FFFFFF;
 }
 .footer {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;
 	color: #000000;
 	}
 .fontNormBlack {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #000000;
 }
@@ -97,31 +89,26 @@ p {
 	color: black;
 }
 .fontLinkRed {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #DA2824;
 	font-weight: bold;
 }
 .fontLinkNavNorm {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #666666;
 	font-weight: bold;
 }
 .fontLinkNavLinks {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #0579c4;
 	font-weight: bold;
 }
 .fontLinksBlue {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #0579c4;
 	font-weight: bold;
 }
 h2 a {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	font-weight: bold;
 	color: #FFFFFF;
@@ -135,4 +122,23 @@ h2 a {
 	-webkit-margin-after: 0px;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
+}
+.blurb {
+  margin: 20px;
+  padding: 10px;
+  @include span-columns(6);
+  background-color: white;
+  color: #000000;
+}
+.break {
+  height: 20px;
+}
+form {
+  padding: 20px;
+  background-color: #147AC0;
+  color: #ffffff;
+}
+label, input {
+  font-size: 20px;
+  display: inline-block;
 }
