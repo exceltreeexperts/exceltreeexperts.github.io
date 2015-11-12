@@ -76,19 +76,21 @@
 
 
 <body id="ctl01_htmBody" onload="RunSpotlight();">
-  <div>
+
+<div class="main">
+  <div class="blurb">
     <div class="header">
       <img src="../images/logoExcel.gif" alt="EX-CEL Tree Experts">
+      <div class="menu-bar">
+        <a href="#RESIDENTIAL">Residential Services</a> /
+        <a href="#COMMERCIAL">Commercial Services</a> /
+        <a href="#ABOUT">About Ex-cel Tree </a>  /
+        <a href="#QUOTE">Request a Quote</a>  /
+        <a href="#CONTACT">Contact Us</a>
+      </div>
     </div>
-    <!-- <div class="menu-bar">
-      <a href="#RESIDENTIAL">Residential Services</a> /
-      <a href="#COMMERCIAL">Commercial Services</a> /
-      <a href="#ABOUT">About Ex-cel Tree </a>  /
-      <a href="#QUOTE">Request a Quote</a>  /
-      <a href="#CONTACT">Contact Us</a>
-    </div> -->
   </div>
-
+  <div class="break"></div>
 
     <a id="RESIDENTIAL"></a>
     <div class="blurb">
@@ -132,7 +134,7 @@
     </div>
 
 <a id="QUOTE"></a>
-<div class="blurb">
+<div class="blurb quote">
     <h2>Request Quote</h2>
     <form method="post" action="http://formidable.herokuapp.com/submissions/">
       <input type='hidden' name='form_token' id='form_token' value='L9bOuvD5XR8s8B5S'>
@@ -142,39 +144,53 @@
       <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[redirect2]" />
       <input type="hidden" value="Name, PrimaryPhone, email" name="required2" />
       <input type="hidden" value="http://www.exceltreeexperts.com/error.htm" name="fields[missing_fields_redirect2]" />
-
-      <p><label for="name">Name: </label><input name="fields[name2]" type="text" class="quote" id="Name2" /></p>
-      <p><label for="contact-number">Contact Number: </label><input name="fields[PrimaryPhone2]" type="text" class="quote" id="PrimaryPhone2" /></p>
-      <p><label for="email">Contact Email: </label><input name="fields[email2]" type="text" class="quote" id="email2" /></p>
-      <p><label for="address">Street Address: </label><input name="fields[Address2]" type="text" class="quote" id="Address2" size="40" /></p>
-      <p><label for="zip">Zip: </label><input name="fields[Zip2]" type="text" class="quote" id="Zip2" size="15" /></p>
-      <label for="type">Tree Service Type:</label>
+      <div class="2"></div>
+      <div class="6">
+      <p><label for="name">Name: </label><br>
+        <input name="fields[name2]" type="text" class="quote" id="Name2" />
+      </p>
+      <p><label for="contact-number">Contact Number: </label><br>
+        <input name="fields[PrimaryPhone2]" type="text" class="quote" id="PrimaryPhone2" />
+      </p>
+      <p><label for="email">Contact Email: </label><br>
+        <input name="fields[email2]" type="text" class="quote" id="email2" />
+      </p>
+      <p><label for="address">Street Address: </label><br>
+        <input name="fields[Address2]" type="text" class="quote" id="Address2" size="40" />
+      </p>
+      <p><label for="zip">Zip: </label><br>
+        <input name="fields[Zip2]" type="text" class="quote" id="Zip2" size="15" />
+      </p>
+      <label for="type">Tree Service Type:</label><br>
       <select name="fields[service_type]" class="quote" id="Service Type:">
         <option selected="selected">Select Service</option>
         <option value="Commercial Tree Care">Commercial Tree Services</option>
         <option value="Residential Tree Care">Residential Tree Services</option>
       </select><br>
-      <p><label for="info">Tree / Project Information: </label><textarea name="fields[project_information]" cols="35" rows="5" class="quote" id="Project Information2"></textarea></p>
+      <p><label for="info">Tree / Project Information: </label><br>
+        <textarea name="fields[project_information]" cols="35" rows="5" class="quote" id="Project Information2"></textarea></p>
       <input name="fields[submit]" type="submit" class="quote" id="Submit Information2" value="Submit Information" />
+    </div>
+    <div class="2"></div>
     </form>
   </div>
-<div="break"></div>
+  <div class="break"></div>
 
-<a="CONTACT"></a>
+<a id="CONTACT"></a>
   <div class="blurb">
     <h2>Contact Us</h2>
     <p>Email us at <a href="mailto:info@exceltreeexperts.com">info@exceltreeexperts.com</a> or contact us using one of the methods below.<p>
     <address>
-      Ex-cel Tree Experts
-      7549 Montevideo Road
-      Jessup, MD 20794
+      Ex-cel Tree Experts<br>
+      7549 Montevideo Road<br>
+      Jessup, MD 20794<br>
     </address>
     <p>Phone: <a href="tel:410-799-3266">(410) 799-3266 </a></p>
     <p>Toll Free: <a href="tel:888-799-3266">(888) 799-3266 </a></p>
     <p>Fax: (410) 799-3663</p>
   </div>
 
-<div>
+<div class="header">
     <a>Home</a> /
     <a>Commercial Services</a> /
     <a>Residential Services</a> /
@@ -184,8 +200,8 @@
     <a>Employees</a><br/>
   ©2009 Ex-cel Tree Experts. All Rights Reserved. Powered by <a>Mojo Web Solutions</a><br>
   7549 Montevideo Road, Jessup, MD 20794<br/>
+  </div>
 </div>
-
 
 <script type="text/javascript">
 

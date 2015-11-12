@@ -123,16 +123,20 @@ h2 a {
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
 }
+// .quote {
+//   @include span-columns(9);
+// }
+
 .blurb {
-  margin: 20px;
-  padding: 10px;
   @include span-columns(12);
+  padding: 10px;
   background-color: white;
   color: #000000;
 }
 .break {
   @include span-columns(12);
   height: 20px;
+  background-color: #192249;
 }
 form {
   padding: 20px;
@@ -142,4 +146,27 @@ form {
 label, input {
   font-size: 20px;
   display: inline-block;
+}
+.main {
+  margin: 20px;
+  padding: 10px;
+  background-color: white;
+}
+address {
+  font-size: 12px;
+}
+
+input, textarea, select, button {
+  width : 300px;
+  margin: 0;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+.2 {
+  @include span-columns(2);
+}
+.6 {
+  @include span-columns(6);
 }
