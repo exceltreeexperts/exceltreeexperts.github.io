@@ -12,48 +12,48 @@
 <script src="js_rotation/jquery.js" language="Javascript"></script>
 <script src="js_rotation/spotlight.js" language="Javascript"></script>
 <script src="js_rotation/jquery.cycle.all.min.js" language="Javascript"></script>
- 
-<STYLE TYPE="text/css" MEDIA="screen,projection"> 
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<STYLE TYPE="text/css" MEDIA="screen,projection">
 <!--
 @import url( css/spotlight.css);
 -->
 </STYLE>
- 
- 
+
+
 <script type="text/javascript" language="javascript">
-		
+
 		$(document).ready(function() {
 		  TemplateMasterRewireWebForm();
 		});
-		
+
 		function FadeItem(){
 			$(document).ready(function(){
-				$(".ResponseMessage").each(function(i) { 
+				$(".ResponseMessage").each(function(i) {
 					FadeIt(this);
 				});
-				
-				$(".ResponseErrorMessage").each(function(i) { 
+
+				$(".ResponseErrorMessage").each(function(i) {
 					$(this).removeAttr("style");
 					FadeIt(this);
 				});
 		  });
 		}
-		
+
 		function FadeIt(itemToFade){
 			if (jQuery.trim($(itemToFade).html()) != ""){
 				$(itemToFade).fadeIn("slow");
 			}
 		}
-		
+
 		function TemplateMasterRewireWebForm(){
-			if(typeof( WebForm_OnSubmit ) == 'function') { 
-				WebForm_OnSubmitCoreTemplate = WebForm_OnSubmit; 
-				WebForm_OnSubmit = function() { 
-						isValid = WebForm_OnSubmitCoreTemplate(); 
+			if(typeof( WebForm_OnSubmit ) == 'function') {
+				WebForm_OnSubmitCoreTemplate = WebForm_OnSubmit;
+				WebForm_OnSubmit = function() {
+						isValid = WebForm_OnSubmitCoreTemplate();
 						if(!isValid)
 							FadeItem();
-						return isValid; 
-				} 
+						return isValid;
+				}
 			}
 		}
 	</script>
@@ -151,23 +151,23 @@
                   <tr>
                     <td height="333" valign="top"> <div id="SpotlightWrapper">
 		<ol>
-				<li id="Residential">			
+				<li id="Residential">
 				<h3>Residential Tree Services</h3>
 				<div class="text">
 					<p>Ex-cel Tree Experts offers a variety of services to help our residential customers maintain beautiful, healthy trees and shrubs. We help protect your plants as well as your landscape investment. <a href="residential-tree-services.html" class="fontLinksWhite">Learn More</a>
-					  
+
 					</p>
                     <h5>Safe Guard Your Home with Professional Tree Removal</h5>
 				</div>
 			</li>
-            <li id="Commercial">			
+            <li id="Commercial">
 				<h3>Commercial & Municipal Tree Services</h3>
 				<div class="text">
 					<p>Ex-cel Tree Experts offers services to help Commercial & Municipal customers maintain beautiful, healthy trees and shrubs. We provide tree services for highway projects, businesses and other properties. <a href="commercial-tree-services.htm" class="fontLinksWhite">Learn More</a></p>
                     <h5>Highways, Parks, Offices & Builder Developments Tree Service</h5>
 				</div>
 			</li>
-		
+
 			<li id="Open"><h3>Certified Aborists</h3>
                         	<div class="text">
 				<p>Certified Arborists are tree care specialists dedicated to excellence in the field of Arboriculture. They are highly qualified in the care of trees and shrubs with proven techniques.<a href="certified-tree-arborist.htm" class="fontLinksWhite">Learn More</a></p>
@@ -241,7 +241,7 @@
                                     <tr>
                                       <td width="209"><img src="images/mainPage.jpg" width="209" height="232" /></td>
                                       <td width="10" valign="top">&nbsp;</td>
-                                      <td valign="top"><p>We provide quality tree care service at a fair price. We believe in Arboriculture as an honorable profession, and encourage the growth and success of our employees, and  to educate the public on the merits of Arboriculture. We follow <a href="safety.htm" class="fontLinksWhite">strict safety procedures</a> to protect both our employees and the property of our clients. To ensure we operate within state and federal guidelines, our team holds several <a href="certifications.htm" class="fontLinksWhite">tree licenses, safety certifications and belong to numerous arboriculture organizations</a>. </p>                                        
+                                      <td valign="top"><p>We provide quality tree care service at a fair price. We believe in Arboriculture as an honorable profession, and encourage the growth and success of our employees, and  to educate the public on the merits of Arboriculture. We follow <a href="safety.htm" class="fontLinksWhite">strict safety procedures</a> to protect both our employees and the property of our clients. To ensure we operate within state and federal guidelines, our team holds several <a href="certifications.htm" class="fontLinksWhite">tree licenses, safety certifications and belong to numerous arboriculture organizations</a>. </p>
                                         <p>We have  long term working relationships wit the National Park Service and the National Arboretum, as well as multitudes of satisfied residential, commercial, and municipal customers. Find out first hand why we're one of the most respected full service tree care companies in the Baltimore-Washington area.</p></td>
                                     </tr>
                                   </table></td>
@@ -311,6 +311,7 @@
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font"><label>
+                                            <div class="g-recaptcha" data-sitekey="6Le0sB0UAAAAAIJ9QUZZD6O7h83C1VdMnqc6xFHE"></div>
                                             <input name="fields[submit]" type="submit" class="quote" id="Submit Information" value="Submit Information" />
                                           </label></td>
                                         </tr>
@@ -343,7 +344,7 @@
               </tr>
             </table></td>
           </tr>
-          
+
         </table></td>
       </tr>
     </table></td>
@@ -360,4 +361,3 @@ pageTracker._trackPageview();
 } catch(err) {}</script>
 </body>
 </html>
- 
