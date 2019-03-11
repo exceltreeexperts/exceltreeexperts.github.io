@@ -34,46 +34,6 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
 @import url( css/spotlight.css);
 -->
 </STYLE>
-
-
-<script type="text/javascript" language="javascript">
-
-		$(document).ready(function() {
-		  TemplateMasterRewireWebForm();
-		});
-
-		function FadeItem(){
-			$(document).ready(function(){
-				$(".ResponseMessage").each(function(i) {
-					FadeIt(this);
-				});
-
-				$(".ResponseErrorMessage").each(function(i) {
-					$(this).removeAttr("style");
-					FadeIt(this);
-				});
-		  });
-		}
-
-		function FadeIt(itemToFade){
-			if (jQuery.trim($(itemToFade).html()) != ""){
-				$(itemToFade).fadeIn("slow");
-			}
-		}
-
-		function TemplateMasterRewireWebForm(){
-			if(typeof( WebForm_OnSubmit ) == 'function') {
-				WebForm_OnSubmitCoreTemplate = WebForm_OnSubmit;
-				WebForm_OnSubmit = function() {
-						isValid = WebForm_OnSubmitCoreTemplate();
-						if(!isValid)
-							FadeItem();
-						return isValid;
-				}
-			}
-		}
-	</script>
-
 <style>
 .fontLinksWhite {
 	font-family: Arial, Helvetica, sans-serif;
