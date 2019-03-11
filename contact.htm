@@ -277,6 +277,7 @@
 <script type="text/javascript">
   $("#contactForm").on('submit', function(event) {
       event.preventDefault();
+      var data = {};
       $.ajax({
         type: "POST",
         url: "https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic",
