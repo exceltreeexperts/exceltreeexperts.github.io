@@ -12,6 +12,8 @@
 <link href="css/css.css" rel="stylesheet" type="text/css" />
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <style>
 .fontLinksWhite {
 	font-family: Arial, Helvetica, sans-serif;
@@ -160,20 +162,16 @@
                                 <td class="fontLinkRed">&nbsp;</td>
                               </tr>
                               <tr>
-                                <td class="fontLinkRed"> <form method="post" action="http://formidable.herokuapp.com/submissions">
+                                <td class="fontLinkRed"> <form id="contactForm" method="post" action="https://https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic">
                                           <input type='hidden' name='form_token' id='form_token' value='45Yaa-RJCpRwBwRi'>
-                                          <input type="hidden" name="fields[subject]" value="Ex-cel Tree Experts Website Lead - Contact Form" />
-                                          <input type="hidden" name="fields[recipient]" value="excel" />
-                                          <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[return_link_url]" />
-                                          <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[redirect]" />
-                                          <input type="hidden" value="http://www.exceltreeexperts.com/error.htm" name="fields[missing_fields_redirect]" />
+                                          <input type="hidden" name="subject" value="Ex-cel Tree Experts Website Lead - Contact Form" />
                     <table width="100%" border="0" cellspacing="0" cellpadding="3">
                       <tr>
                         <td class="fontNormBlack">Name:</td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack"><label>
-                          <input name="fields[name]" type="text" class="quote" id="Name" />
+                          <input name="name" type="text" class="quote" id="Name" />
                         </label></td>
                       </tr>
                       <tr>
@@ -181,14 +179,14 @@
                       </tr>
                       <tr>
                         <td class="fontNormBlack"><label>
-                          <input name="fields[primary_phone]" type="text" class="quote" id="PrimaryPhone" />
+                          <input name="phone" type="text" class="quote" id="PrimaryPhone" />
                         </label></td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack">Tree Service Type:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><select name="fields[service]" class="quote" id="Service">
+                        <td class="fontNormBlack"><select name="service" class="quote" id="Service">
                             <option selected="selected">Select One</option>
                             <option value="Commercial">Commercial Services</option>
                             <option value="Residential">Residential Services</option>
@@ -198,31 +196,31 @@
                         <td class="fontNormBlack">Email Address:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><input name="fields[email]" type="text" class="quote" id="Email" /></td>
+                        <td class="fontNormBlack"><input name="email" type="text" class="quote" id="Email" /></td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack">Street Address:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><input name="fields[address]" type="text" class="quote" id="Address" size="50" /></td>
+                        <td class="fontNormBlack"><input name="address" type="text" class="quote" id="Address" size="50" /></td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack">City:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><input name="fields[city]" type="text" class="quote" id="City" /></td>
+                        <td class="fontNormBlack"><input name="city" type="text" class="quote" id="City" /></td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack">Zip:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><input name="fields[zip]" type="text" class="quote" id="Zip" /></td>
+                        <td class="fontNormBlack"><input name="zip" type="text" class="quote" id="Zip" /></td>
                       </tr>
                       <tr>
                         <td class="fontNormBlack">Feedback or Tree Project Information:</td>
                       </tr>
                       <tr>
-                        <td class="fontNormBlack"><textarea name="fields[project_information]" cols="55" rows="5" class="quote" id="Information"></textarea></td>
+                        <td class="fontNormBlack"><textarea name="message" cols="55" rows="5" class="quote" id="Information"></textarea></td>
                       </tr>
                       <tr>
                         <td class="fontLinksBlue"><span class="font"><img src="images/spacer.gif" width="10" height="5" /></span></td>
@@ -230,7 +228,7 @@
                       <tr>
                         <td class="fontLinksBlue"><label>
 													<div class="g-recaptcha" data-sitekey="6Le0sB0UAAAAAIJ9QUZZD6O7h83C1VdMnqc6xFHE"></div>
-                          <input name="fields[submit]" type="submit" class="quote" id="button" value="Submit Information" />
+                          <input name=submit" type="submit" class="quote" id="button" value="Submit Information" />
                         </label></td>
                       </tr>
                     </table>
@@ -275,6 +273,24 @@
     </table></td>
   </tr>
 </table>
+
+<script type="text/javascript">
+  $("#contactForm").on('submit', function(event) {
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic",
+        headers: {
+           'x-api-key':'eHRlHIwgAvatIwv1nske51qglM4QRq2F2B7RfB84',
+        },
+        data: $('#contactForm').serialize(),
+        success: function() {
+            window.location = 'thankyou.htm';
+        },
+        dataType: "json"
+      });
+  });
+</script>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

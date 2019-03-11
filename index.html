@@ -9,6 +9,7 @@
 <meta name="keywords" content="maryland tree service, maryland tree pruning, professional tree removal, maryland tree trimming, residential, commercial, tree, trimming, cutting, experts, trained, arborists, shrub, saftey, removal, gsa, contractor, certified, arboriculture, tree care companies, baltimore, jessup, md, maryland, tree expert, management, Arboriculture, agricultural" />
 <link href="css/css.css" rel="stylesheet" type="text/css" />
 <link href="css/spotlight.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 <!--
 if (screen.width <= 699) {
@@ -247,14 +248,7 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
                                     <td align="right" valign="middle"><table width="100%" border="0" cellpadding="10" cellspacing="0" background="images/coverBlueFrost.png">
                                       <tr>
                                         <td valign="top"><h2>Request Quote</h2>
-                                          <form method="post" action="http://formidable.herokuapp.com/submissions/">
-                                            <input type='hidden' name='form_token' id='form_token' value='L9bOuvD5XR8s8B5S'>
-                                            <input type="hidden" name="fields[subject]" value="Ex-cel Tree Experts Website Lead" />
-                                            <input type="hidden" name="fields[recipient]" value="excel" />
-                                            <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[return_link_url]" />
-                                            <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[redirect]" />
-                                            <input type="hidden" value="name, primary_phone, email" name="required" />
-                                            <input type="hidden" value="http://www.exceltreeexperts.com/error.htm" name="fields[missing_fields_redirect]" />
+                                          <form method="post" id='contactForm' action="https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic">
                                             <table width="100%" border="0" cellspacing="0" cellpadding="2">
                                               <tr>
                                                 <td valign="top" class="font">Name:</td>
@@ -262,9 +256,9 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
                                                 </tr>
                                               <tr>
                                                 <td width="43%" valign="top" class="font"><label>
-                                                  <input name="fields[name]" type="text" class="quote" id="Name2" />
+                                                  <input name="name" type="text" class="quote" id="Name2" />
                                                   </label></td>
-                                                <td width="57%" valign="top" class="font"><input name="fields[primary_phone]" type="text" class="quote" id="PrimaryPhone2" /></td>
+                                                <td width="57%" valign="top" class="font"><input name="phone" type="text" class="quote" id="PrimaryPhone2" /></td>
                                                 </tr>
                                               <tr>
 
@@ -276,9 +270,9 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
 
                                               <tr>
 
-                                                <td valign="top" class="font"><input name="fields[email]" type="text" class="quote" id="email2" /></td>
+                                                <td valign="top" class="font"><input name="email" type="text" class="quote" id="email2" /></td>
 
-                                                <td valign="top" class="font"><input name="fields[address]" type="text" class="quote" id="Address2" size="40" /></td>
+                                                <td valign="top" class="font"><input name="address" type="text" class="quote" id="Address2" size="40" /></td>
 
                                                 </tr>
 
@@ -292,11 +286,11 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
 
                                               <tr>
 
-                                                <td valign="top" class="font"><input name="fields[zip]" type="text" class="quote" id="Zip2" size="15" /></td>
+                                                <td valign="top" class="font"><input name="zip" type="text" class="quote" id="Zip2" size="15" /></td>
 
                                                 <td valign="top" class="font"><label>
 
-                                                  <select name="fields[service_type]" class="quote" id="Service Type:">
+                                                  <select name="service" class="quote" id="Service Type:">
 
                                                     <option selected="selected">Select Service</option>
 
@@ -320,7 +314,7 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
 
                                                 <td colspan="2" valign="top" class="font"><label>
 
-                                                  <textarea name="fields[project_information]" cols="35" rows="5" class="quote" id="Project Information2"></textarea>
+                                                  <textarea name="message" cols="35" rows="5" class="quote" id="Project Information2"></textarea>
 
                                                   </label></td>
 
@@ -336,7 +330,7 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
 
                                                 <td colspan="2" valign="top" class="font"><label>
                                                   <div class="g-recaptcha" data-sitekey="6Le0sB0UAAAAAIJ9QUZZD6O7h83C1VdMnqc6xFHE"></div>
-                                                  <input name="fields[submit]" type="submit" class="quote" id="Submit Information2" value="Submit Information" />
+                                                  <input name="submit" type="submit" class="quote" id="Submit Information2" value="Submit Information" />
 
                                                   </label></td>
 
@@ -419,6 +413,25 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
   </tr>
 
 </table>
+
+<script type="text/javascript">
+  $("#contactForm").on('submit', function(event) {
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        headers: {
+           'x-api-key':'eHRlHIwgAvatIwv1nske51qglM4QRq2F2B7RfB84',
+        },
+        url: "https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic",
+        data: $('#contactForm').serialize(),
+        success: function() {
+            window.location = 'thankyou.htm';
+        },
+        dataType: "json"
+      });
+  });
+</script>
+
 
 <script type="text/javascript">
 

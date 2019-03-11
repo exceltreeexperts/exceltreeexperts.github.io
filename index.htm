@@ -13,6 +13,7 @@
 <script src="js_rotation/spotlight.js" language="Javascript"></script>
 <script src="js_rotation/jquery.cycle.all.min.js" language="Javascript"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <STYLE TYPE="text/css" MEDIA="screen,projection">
 <!--
 @import url( css/spotlight.css);
@@ -258,40 +259,34 @@
                             <table width="100%" border="0" cellpadding="10" cellspacing="0" background="images/coverBlueFrost.png">
                               <tr>
                                 <td valign="top"><h2>Request Quote</h2>
-                                    <form method="post" action="http://formidable.herokuapp.com/submissions">
-                                      <input type='hidden' name='form_token' id='form_token' value='L9bOuvD5XR8s8B5S'>
-                    <input type="hidden" name="fields[subject]" value="Ex-cel Tree Experts Website Lead" />
-                    <input type="hidden" name="fields[recipient]" value="excel" />
-                    <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[return_link_url]" />
-                    <input type="hidden" value="http://www.exceltreeexperts.com/thankyou.htm" name="fields[redirect]" />
-                    <input type="hidden" value="http://www.exceltreeexperts.com/error.htm" name="fields[missing_fields_redirect]" />
+                                    <form id='contactForm' method="post" action="https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic">
                                       <table width="100%" border="0" cellspacing="0" cellpadding="2">
                                         <tr>
                                           <td valign="top" class="font">Name:</td>
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font"><label>
-                                            <input name="fields[name]" type="text" class="quote" id="Name:" />
+                                            <input name="name" type="text" class="quote" id="Name:" />
                                           </label></td>
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font">Contact Number:</td>
                                         </tr>
                                         <tr>
-                                          <td valign="top" class="font"><input name="fields[contact_number]" type="text" class="quote" id="Contact Number:" /></td>
+                                          <td valign="top" class="font"><input name="phone" type="text" class="quote" id="Contact Number:" /></td>
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font">Contact Email:</td>
                                         </tr>
                                         <tr>
-                                          <td valign="top" class="font"><input name="fields[name]" type="text" class="quote" id="Email" /></td>
+                                          <td valign="top" class="font"><input name="email" type="text" class="quote" id="Email" /></td>
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font">Tree Service Type:</td>
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font"><label>
-                                            <select name="fields[service_type]" class="quote" id="Service Type">
+                                            <select name="service" class="quote" id="Service Type">
                                               <option selected="selected">Select Service</option>
                                               <option value="Commercial Tree Care">Commercial Tree Services</option>
                                               <option value="Residential Tree Care">Residential Tree Services</option>
@@ -303,7 +298,7 @@
                                         </tr>
                                         <tr>
                                           <td valign="top" class="font"><label>
-                                            <textarea name="fields[project_information]" cols="35" rows="5" class="quote" id="Project Information"></textarea>
+                                            <textarea name="message" cols="35" rows="5" class="quote" id="Project Information"></textarea>
                                           </label></td>
                                         </tr>
                                         <tr>
@@ -312,7 +307,7 @@
                                         <tr>
                                           <td valign="top" class="font"><label>
                                             <div class="g-recaptcha" data-sitekey="6Le0sB0UAAAAAIJ9QUZZD6O7h83C1VdMnqc6xFHE"></div>
-                                            <input name="fields[submit]" type="submit" class="quote" id="Submit Information" value="Submit Information" />
+                                            <input name="submit" type="submit" class="quote" id="Submit Information" value="Submit Information" />
                                           </label></td>
                                         </tr>
                                       </table>
@@ -350,6 +345,25 @@
     </table></td>
   </tr>
 </table>
+
+<script type="text/javascript">
+  $("#contactForm").on('submit', function(event) {
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic",
+        headers: {
+           'x-api-key':'eHRlHIwgAvatIwv1nske51qglM4QRq2F2B7RfB84',
+        },
+        data: $('#contactForm').serialize(),
+        success: function() {
+            window.location = 'thankyou.htm';
+        },
+        dataType: "json"
+      });
+  });
+</script>
+
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
