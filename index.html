@@ -415,20 +415,22 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
 </table>
 
 <script type="text/javascript">
-  $("#contactForm").on('submit', function(event) {
-      event.preventDefault();
-      $.ajax({
-        type: "POST",
-        headers: {
-           'x-api-key':'eHRlHIwgAvatIwv1nske51qglM4QRq2F2B7RfB84',
-        },
-        url: "https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic",
-        data: $('#contactForm').serialize(),
-        success: function() {
-            window.location = 'thankyou.htm';
-        },
-        dataType: "json"
-      });
+  $(document).ready(function() {
+    $("#contactForm").on('submit', function(event) {
+        event.preventDefault();
+        $.ajax({
+          type: "POST",
+          headers: {
+            'x-api-key':'eHRlHIwgAvatIwv1nske51qglM4QRq2F2B7RfB84',
+          },
+          url: "https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic",
+          data: $('#contactForm').serialize(),
+          success: function() {
+              window.location = 'thankyou.htm';
+          },
+          dataType: "json"
+        });
+    });
   });
 </script>
 
