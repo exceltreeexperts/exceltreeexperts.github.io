@@ -372,32 +372,34 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
 </table>
 
 <script type="text/javascript">
-  $("#contactForm").on('submit', function(event) {
-      event.preventDefault();
-      var data = {
-        name: $('#contactForm #name').val(),
-        email: $('#contactForm #email').val(),
-        service: $('#contactForm #service').val(),
-        message:  $('#contactForm #message').val(),
-        phone: $('#contactForm #phone').val(),
-        city: $('#contactForm #city').val(),
-        zip:  $('#contactForm #zip').val(),
-      };
-      $.ajax({
-        type: "POST",
-        url: "https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic",
-        headers: {
-           'x-api-key':'eHRlHIwgAvatIwv1nske51qglM4QRq2F2B7RfB84',
-        },
-        data: JSON.stringify(data),
-        success: function() {
-            window.location.assign('/thankyou.htm');
-        },
-        error: function() {
-            window.location.assign('/thankyou.htm');
-        },
-        dataType: "json"
-      });
+  $(document).ready(function() {
+    $("#contactForm").on('submit', function(event) {
+        event.preventDefault();
+        var data = {
+          name: $('#contactForm #name').val(),
+          email: $('#contactForm #email').val(),
+          service: $('#contactForm #service').val(),
+          message:  $('#contactForm #message').val(),
+          phone: $('#contactForm #phone').val(),
+          city: $('#contactForm #city').val(),
+          zip:  $('#contactForm #zip').val(),
+        };
+        $.ajax({
+          type: "POST",
+          url: "https://8d5zr16b33.execute-api.us-east-1.amazonaws.com/default/faFormtastic",
+          headers: {
+            'x-api-key':'eHRlHIwgAvatIwv1nske51qglM4QRq2F2B7RfB84',
+          },
+          data: JSON.stringify(data),
+          success: function() {
+              window.location.assign('/thankyou.htm');
+          },
+          error: function() {
+              window.location.assign('/thankyou.htm');
+          },
+          dataType: "json"
+        });
+    });
   });
 </script>
 
