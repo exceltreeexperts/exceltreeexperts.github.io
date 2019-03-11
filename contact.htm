@@ -293,7 +293,10 @@
         },
         data: JSON.stringify(data),
         success: function() {
-            window.location = 'thankyou.htm';
+            window.location.assign('/thankyou.htm');
+        },
+        error: function() {
+            window.location.assign('/thankyou.htm');
         },
         dataType: "json"
       });
