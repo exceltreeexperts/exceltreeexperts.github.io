@@ -283,7 +283,7 @@
         headers: {
            'x-api-key':'eHRlHIwgAvatIwv1nske51qglM4QRq2F2B7RfB84',
         },
-        data: $('#contactForm').serialize(),
+        data: $('#contactForm').serializeArray().map(function(x){data[x.name] = x.value;}),
         success: function() {
             window.location = 'thankyou.htm';
         },
